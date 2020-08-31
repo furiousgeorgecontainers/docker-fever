@@ -72,7 +72,7 @@ jobs:
           if [ -n "$version" ]; then
             echo "Using version from tag or latest: $version"
           else
-            version=$(cat ./version 2>/dev/null || echo "1.0.0.1");
+            version=$(cat ./version 2>/dev/null || echo "1.0.0.0");
             echo "Getting version from this job: $version"
           fi
 
