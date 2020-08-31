@@ -61,6 +61,9 @@ jobs:
           if [ -z "$version" ]; then
             # Get version from latest image on docker hub
             version=$(./.github/build/get_docker_version.sh $DOCKER_REPO)
+            if [ "$version" == "null" ]; then
+              unset version
+            fi
           fi
            
           # if the latest image does not have the version label
